@@ -2,10 +2,10 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
 	groovy
-	id("org.springframework.boot") version "2.7.4"
-	id("io.spring.dependency-management") version "1.0.14.RELEASE"
-	kotlin("jvm") version "1.7.10"
-	kotlin("plugin.spring") version "1.7.10"
+	id("org.springframework.boot") version "3.1.1"
+	id("io.spring.dependency-management") version "1.1.1"
+	kotlin("jvm") version "1.9.0"
+	kotlin("plugin.spring") version "1.9.0"
 }
 
 group = "com.rewe-digital"
@@ -25,9 +25,9 @@ dependencies {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 		exclude(group = "junit", module = "junit")
 	}
-	testImplementation("org.codehaus.groovy:groovy-all:3.0.8")
-	testImplementation("org.spockframework:spock-core:2.0-groovy-3.0")
-	testImplementation("org.spockframework:spock-spring:2.0-groovy-3.0")
+	testImplementation("org.apache.groovy:groovy-all:4.0.13")
+	testImplementation("org.spockframework:spock-core:2.4-M1-groovy-4.0")
+	testImplementation("org.spockframework:spock-spring:2.4-M1-groovy-4.0")
 }
 
 tasks.withType<KotlinCompile> {
